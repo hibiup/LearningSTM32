@@ -1,0 +1,9 @@
+Listings/
+DebugConfig/
+Objects
+/*.txt
+*.uvguix.*
+*.uvgui.*
+*.uvoptx
+*.scvd
+JLink*
