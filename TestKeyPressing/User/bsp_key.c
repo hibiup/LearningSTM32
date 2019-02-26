@@ -22,3 +22,14 @@ void Key_GPIO_Config(void)
     // 初始化key2
     GPIO_Init(KEY2_GPIO_PORT, &GPIO_InitStructure);
 }
+
+
+uint8_t Key_Scan(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin) {
+    /* 检测是否有按键按下 */
+    if (GPIO_ReadInputDataBit(GPIOx, GPIO_Pin) == KEY_ON ) {         // GPIO_ReadInputDataBit 定义在 inc\stm32f10x_gpio.h 中，它读取 GPIOx.IDR 寄存器上的数据并检测指定引脚的值。
+        /*等待按键释放 */
+        while (GPIO_ReadInputDataBit(GPIOx, GPIO_Pin) == KEY_ON);    // 死循环，直到 False，也就是直到返回 KEY_OFF
+        return KEY_ON;
+    } else
+        return KEY_OFF;
+}
