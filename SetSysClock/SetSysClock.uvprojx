@@ -390,12 +390,22 @@
             <File>
               <FileName>bsp_clkconfig.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\clock\bsp_clkconfig.c</FilePath>
+              <FilePath>.\User\bsp\bsp_clkconfig.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\bsp\bsp_led.c</FilePath>
             </File>
             <File>
               <FileName>bsp_clkconfig.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\clock\bsp_clkconfig.h</FilePath>
+              <FilePath>.\User\bsp\bsp_clkconfig.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\User\bsp\bsp_led.h</FilePath>
             </File>
           </Files>
         </Group>

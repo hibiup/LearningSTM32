@@ -44,21 +44,7 @@ int HSE_SetSysClock(uint32_t pllmul){
   
     // 只有 HSE 稳定之后则继续往下执行
     if (HSEStartUpStatus == SUCCESS){
-        //----------------------------------------------------------------------//
-        // （以下两条指令操作FLASH 闪存用到的，如果不操作FLASH，这两个注释掉也没影响）
-        //
-        // 使能FLASH 预存取缓冲区
-        FLASH_PrefetchBufferCmd(FLASH_PrefetchBuffer_Enable);
-
-        // SYSCLK周期与闪存访问时间的比例设置，这里统一设置成2
-        // 设置成2的时候，SYSCLK低于48M也可以工作，如果设置成0或者1的时候，
-        // 如果配置的SYSCLK超出了范围的话，则会进入硬件错误，程序就死了
-        // 0：0 < SYSCLK <= 24M
-        // 1：24< SYSCLK <= 48M
-        // 2：48< SYSCLK <= 72M
-        FLASH_SetLatency(FLASH_Latency_2);
-        //----------------------------------------------------------------------//
-     
+        //----------------------------------------------------------------------//     
         // AHB预分频因子设置为1分频，HCLK = SYSCLK 
         RCC_HCLKConfig(RCC_SYSCLK_Div1); 
       
@@ -144,19 +130,7 @@ int HSI_SetSysClock(uint32_t pllmul){
   
     // 只有 HSI就绪之后则继续往下执行
     if (HSIStartUpStatus == RCC_CR_HSIRDY){
-        //----------------------------------------------------------------------//
-        // 使能FLASH 预存取缓冲区
-        FLASH_PrefetchBufferCmd(FLASH_PrefetchBuffer_Enable);
-
-        // SYSCLK周期与闪存访问时间的比例设置，这里统一设置成2
-        // 设置成2的时候，SYSCLK低于48M也可以工作，如果设置成0或者1的时候，
-        // 如果配置的SYSCLK超出了范围的话，则会进入硬件错误，程序就死了
-        // 0：0 < SYSCLK <= 24M
-        // 1：24< SYSCLK <= 48M
-        // 2：48< SYSCLK <= 72M
-        FLASH_SetLatency(FLASH_Latency_2);
-        //----------------------------------------------------------------------//
-     
+        //----------------------------------------------------------------------//     
         // AHB预分频因子设置为1分频，HCLK = SYSCLK 
         RCC_HCLKConfig(RCC_SYSCLK_Div1); 
       
