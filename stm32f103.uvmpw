@@ -13,12 +13,16 @@
 
   <project>
     <PathAndName>.\HelloLib\HelloLib.uvprojx</PathAndName>
-    <NodeIsActive>1</NodeIsActive>
-    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
     <PathAndName>.\TestKeyPressing\TestKeyPressing.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\SetSysClock\SetSysClock.uvprojx</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
+    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
 </ProjectWorkspace>
