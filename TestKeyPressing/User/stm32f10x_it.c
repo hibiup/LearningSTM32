@@ -13,7 +13,9 @@
   * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
   * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
   * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
-  * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
+  * DIRECT, INDIRECT OR CONSEQUENTI
+  
+  AL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
   * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
   * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
   *
@@ -23,6 +25,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
+#include "bsp\bsp_led.h"
+#include "bsp\bsp_exti.h"
 
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
@@ -136,6 +140,31 @@ void SysTick_Handler(void)
 {
 }
 
+
+
+void KEY1_IRQHandler(void)
+{
+  //确保是否产生了EXTI Line中断
+  if(EXTI_GetITStatus(KEY1_INT_EXTI_LINE) != RESET) 
+  {
+    // LED1 取反    
+    LED1_TOGGLE;
+    //清除中断标志位
+    EXTI_ClearITPendingBit(KEY1_INT_EXTI_LINE);     
+  }  
+}
+
+void KEY2_IRQHandler(void)
+{
+  //确保是否产生了EXTI Line中断
+  if(EXTI_GetITStatus(KEY2_INT_EXTI_LINE) != RESET) 
+  {
+    // LED2 取反    
+    LED2_TOGGLE;
+    //清除中断标志位
+    EXTI_ClearITPendingBit(KEY2_INT_EXTI_LINE);     
+  }  
+}
 /******************************************************************************/
 /*                 STM32F10x Peripherals Interrupt Handlers                   */
 /*  Add here the Interrupt Handler for the used peripheral(s) (PPP), for the  */

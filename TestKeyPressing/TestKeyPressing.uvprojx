@@ -393,14 +393,24 @@
               <FilePath>.\User\stm32f10x_it.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_key.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\User\bsp_key.c</FilePath>
+              <FileName>bsp_exti.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\User\bsp\bsp_exti.h</FilePath>
             </File>
             <File>
-              <FileName>bsp_key.h</FileName>
+              <FileName>bsp_led.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\bsp_key.h</FilePath>
+              <FilePath>.\User\bsp\bsp_led.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\bsp\bsp_exti.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\bsp\bsp_led.c</FilePath>
             </File>
           </Files>
         </Group>
