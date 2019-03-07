@@ -48,7 +48,7 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\Objects\</OutputDirectory>
+          <OutputDirectory>..\Output\</OutputDirectory>
           <OutputName>TestKeyPressing</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD, USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\User;.\Libraries\CMSIS</IncludePath>
+              <IncludePath>.\User;..\stm32f10x\Libraries\CMSIS;..\stm32f10x\Libraries\STM32F10x_StdPeriph_Driver\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -388,11 +388,6 @@
               <FilePath>.\User\main.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_it.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\User\stm32f10x_it.c</FilePath>
-            </File>
-            <File>
               <FileName>bsp_exti.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\User\bsp\bsp_exti.h</FilePath>
@@ -412,20 +407,15 @@
               <FileType>1</FileType>
               <FilePath>.\User\bsp\bsp_led.c</FilePath>
             </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>CMSIS</GroupName>
-          <Files>
             <File>
-              <FileName>core_cm3.c</FileName>
+              <FileName>stm32f10x_it.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Libraries\CMSIS\core_cm3.c</FilePath>
+              <FilePath>.\User\stm32f10x_it.c</FilePath>
             </File>
             <File>
-              <FileName>system_stm32f10x.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\CMSIS\system_stm32f10x.c</FilePath>
+              <FileName>stm32f10x_it.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\User\stm32f10x_it.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -435,7 +425,7 @@
             <File>
               <FileName>startup_stm32f10x_hd.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\Libraries\CMSIS\startup_stm32f10x_hd.s</FilePath>
+              <FilePath>..\stm32f10x\Libraries\CMSIS\Startup\startup_stm32f10x_hd.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -443,119 +433,129 @@
           <GroupName>Libraries</GroupName>
           <Files>
             <File>
-              <FileName>misc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c</FilePath>
+              <FileName>core_cm3.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\core_cm3.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_adc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.c</FilePath>
+              <FileName>system_stm32f10x.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\system_stm32f10x.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_bkp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.c</FilePath>
+              <FileName>misc.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\misc.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_can.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.c</FilePath>
+              <FileName>stm32f10x_adc.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_adc.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_cec.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.c</FilePath>
+              <FileName>stm32f10x_bkp.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_bkp.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_crc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.c</FilePath>
+              <FileName>stm32f10x_can.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_can.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_dac.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.c</FilePath>
+              <FileName>stm32f10x_cec.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_cec.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_dbgmcu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.c</FilePath>
+              <FileName>stm32f10x_crc.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_crc.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.c</FilePath>
+              <FileName>stm32f10x_dac.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_dac.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_exti.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c</FilePath>
+              <FileName>stm32f10x_dbgmcu.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_dbgmcu.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.c</FilePath>
+              <FileName>stm32f10x_dma.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_dma.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_fsmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.c</FilePath>
+              <FileName>stm32f10x_exti.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_exti.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c</FilePath>
+              <FileName>stm32f10x_flash.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_flash.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_i2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c</FilePath>
+              <FileName>stm32f10x_fsmc.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_fsmc.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_iwdg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.c</FilePath>
+              <FileName>stm32f10x_gpio.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_gpio.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_pwr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.c</FilePath>
+              <FileName>stm32f10x_i2c.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_i2c.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_rcc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c</FilePath>
+              <FileName>stm32f10x_iwdg.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_iwdg.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_rtc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.c</FilePath>
+              <FileName>stm32f10x_pwr.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_pwr.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_sdio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.c</FilePath>
+              <FileName>stm32f10x_rcc.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_rcc.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c</FilePath>
+              <FileName>stm32f10x_rtc.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_rtc.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c</FilePath>
+              <FileName>stm32f10x_sdio.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_sdio.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c</FilePath>
+              <FileName>stm32f10x_spi.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_spi.o</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_wwdg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.c</FilePath>
+              <FileName>stm32f10x_tim.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_tim.o</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_usart.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_usart.o</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_wwdg.o</FileName>
+              <FileType>3</FileType>
+              <FilePath>..\Output\stm32f10x_wwdg.o</FilePath>
             </File>
           </Files>
         </Group>

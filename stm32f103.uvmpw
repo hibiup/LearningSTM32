@@ -8,23 +8,25 @@
   <WorkspaceName>WorkSpace</WorkspaceName>
 
   <project>
-    <PathAndName>.\HelloLED\HelloLED.uvprojx</PathAndName>
-  </project>
-
-  <project>
-    <PathAndName>.\HelloLib\HelloLib.uvprojx</PathAndName>
-    <NodeIsExpanded>1</NodeIsExpanded>
-  </project>
-
-  <project>
     <PathAndName>.\TestKeyPressing\TestKeyPressing.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\SetSysClock\SetSysClock.uvprojx</PathAndName>
     <NodeIsActive>1</NodeIsActive>
     <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
-    <PathAndName>.\SetSysClock\SetSysClock.uvprojx</PathAndName>
-    <NodeIsExpanded>1</NodeIsExpanded>
+    <PathAndName>.\stm32f10x\MD5Project\stm32f10x.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\HelloLED\HelloLED.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\HelloWorld\HelloWorld.uvprojx</PathAndName>
   </project>
 
 </ProjectWorkspace>

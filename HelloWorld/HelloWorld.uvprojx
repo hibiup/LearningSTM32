@@ -48,8 +48,8 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>..\Output\</OutputDirectory>
-          <OutputName>HelloLib</OutputName>
+          <OutputDirectory>.\Objects\</OutputDirectory>
+          <OutputName>HelloLED</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -188,7 +188,7 @@
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>1</useUlib>
+            <useUlib>0</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -336,9 +336,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F10X_HD, USE_STDPERIPH_DRIVER</Define>
+              <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\stm32f10x\Libraries\CMSIS;..\stm32f10x\Libraries\STM32F10x_StdPeriph_Driver\inc;.\User</IncludePath>
+              <IncludePath></IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -380,175 +380,42 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>User</GroupName>
-          <Files>
-            <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\User\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\User\bsp_led.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_led.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\User\bsp_led.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_it.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\User\stm32f10x_it.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_it.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\User\stm32f10x_it.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Doc</GroupName>
-        </Group>
-        <Group>
-          <GroupName>Libraries</GroupName>
-          <Files>
-            <File>
-              <FileName>core_cm3.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\core_cm3.o</FilePath>
-            </File>
-            <File>
-              <FileName>misc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\misc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_adc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_adc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_bkp.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_bkp.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_can.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_can.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_cec.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_cec.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_crc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_crc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_dac.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_dac.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_dbgmcu.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_dbgmcu.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_dma.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_dma.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_exti.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_exti.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_flash.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_flash.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_fsmc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_fsmc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_gpio.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_gpio.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_i2c.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_i2c.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_iwdg.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_iwdg.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_pwr.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_pwr.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_rcc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_rcc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_rtc.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_rtc.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_sdio.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_sdio.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_spi.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_spi.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_tim.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_tim.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_usart.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_usart.o</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_wwdg.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\stm32f10x_wwdg.o</FilePath>
-            </File>
-            <File>
-              <FileName>system_stm32f10x.o</FileName>
-              <FileType>3</FileType>
-              <FilePath>..\Output\system_stm32f10x.o</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Startup</GroupName>
+          <GroupName>common</GroupName>
           <Files>
             <File>
               <FileName>startup_stm32f10x_hd.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\stm32f10x\Libraries\CMSIS\Startup\startup_stm32f10x_hd.s</FilePath>
+              <FilePath>.\startup_stm32f10x_hd.s</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\common\stm32f10x.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>gpio</GroupName>
+          <Files>
+            <File>
+              <FileName>gpio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\gpio\gpio.h</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gpio\gpio.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>main</GroupName>
+          <Files>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\main\main.c</FilePath>
             </File>
           </Files>
         </Group>
